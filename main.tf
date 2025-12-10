@@ -3,7 +3,7 @@
 resource "hcloud_ssh_key" "default" {
   count      = 0 // pon 1 si quieres que Terraform cree la clave en Hetzner
   name       = var.ssh_key_name
-  public_key = file("~/.ssh/id_rsa.pub")
+  // public_key = file("~/.ssh/id_rsa.pub")
 }
 
 data "hcloud_ssh_key" "selected" {
